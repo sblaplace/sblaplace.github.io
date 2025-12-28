@@ -52,6 +52,10 @@ Not only has the mean death rate decreased, but the standard deviation has also 
 
 This reduced variability indicates more consistent safety outcomes across different years and events.
 
+### This Is Happening Despite Obstacles
+
+This change is even more impressive when considering factors like the spread of mobile homes, which offer basically no protection, can whose residents can make up over 40% of fatalities in some cases. Also, nighttime and rain-wrapped tornadoes, which are much more difficult to see and to judge the path of from the ground, are becoming more common as well. In those cases, early warning systems can be the only way to know that the tornado is coming before it has arrived.
+
 ## Methodology
 
 The analysis uses population-adjusted mortality rates calculated as deaths per million population in tornado-prone regions. Population estimates are derived from U.S. Census data for 25 states with significant tornado activity: Alabama, Arkansas, Florida, Georgia, Iowa, Illinois, Indiana, Kansas, Kentucky, Louisiana, Michigan, Minnesota, Missouri, Mississippi, North Carolina, North Dakota, Nebraska, Ohio, Oklahoma, South Carolina, South Dakota, Tennessee, Texas, Virginia, and Wisconsin.
@@ -70,7 +74,7 @@ The era boundaries reflect major technological milestones:
 - **Tornado deaths (1950-2024):** [NOAA Storm Prediction Center Tornado Database](https://www.spc.noaa.gov/wcm/)
 - **Tornado deaths (1900-1949):** Thomas P. Grazulis "Significant Tornadoes" historical records
 - **Population estimates:** [U.S. Census Bureau Historical Population Tables](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
-
+- 
 <details>
 <summary><strong>View Analysis Code</strong></summary>
 
