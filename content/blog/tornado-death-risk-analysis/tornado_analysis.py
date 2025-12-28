@@ -231,7 +231,7 @@ ax2.errorbar(era_order, era_stats['mean'], yerr=era_stats['std'],
 for bar, era in zip(bars, era_order):
     height = bar.get_height()
     ax2.text(bar.get_x() + bar.get_width()/2., height + era_stats.loc[era, 'std'] + 0.15,
-             f'{height:.2f}', ha='center', va='bottom', fontweight='bold', fontsize=11)
+             f'{height:.2f}', ha='center', va='bottom', fontsize=9)
 
 ax2.set_ylabel('Mean Death Rate', fontsize=11)
 ax2.set_xlabel('Era', fontsize=11)
