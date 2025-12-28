@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ config.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            margin-bottom: 2em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 1em;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 0.3em;
+        }
+        .meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .tags {
+            margin-top: 0.5em;
+        }
+        .tag {
+            display: inline-block;
+            background: #ecf0f1;
+            padding: 0.2em 0.6em;
+            margin-right: 0.5em;
+            border-radius: 3px;
+            font-size: 0.85em;
+            color: #555;
+        }
+        article {
+            margin: 2em 0;
+        }
+        article img {
+            max-width: 100%;
+            height: auto;
+        }
+        article h2 {
+            color: #34495e;
+            margin-top: 1.5em;
+        }
+        article h3 {
+            color: #555;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 1em;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2em;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        details {
+            margin: 1em 0;
+            padding: 1em;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ page.title }}</h1>
+        <div class="meta">
+            <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+        </div>
+        {% if page.taxonomies.tags %}
+        <div class="tags">
+            {% for tag in page.taxonomies.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+    
+    <article>
+        {{ page.content | safe }}
+    </article>
+    
+    <a href="/" class="back-link">← Back to home</a>
+</body>
+</html>
