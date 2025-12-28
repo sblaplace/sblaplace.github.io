@@ -41,8 +41,11 @@
             font-size: 0.85em;
             color: #444;
         }
-        article {
+        main {
             margin: 2em 0;
+        }
+        article {
+            margin-bottom: 2em;
         }
         article img {
             max-width: 100%;
@@ -72,11 +75,14 @@
             background: none;
             padding: 0;
         }
+        nav {
+            margin-top: 2em;
+        }
         .back-link {
             display: inline-block;
-            margin-top: 2em;
-            color: #2980b9;
+            color: #1f6693;
             text-decoration: none;
+            font-weight: 500;
         }
         .back-link:hover {
             text-decoration: underline;
@@ -109,10 +115,14 @@
         {% endif %}
     </header>
     
-    <article>
-        {{ page.content | safe }}
-    </article>
-    
-    <a href="/" class="back-link">← Back to home</a>
+    <main>
+        <article>
+            {{ page.content | safe }}
+        </article>
+        
+        <nav>
+            <a href="/" class="back-link">← Back to home</a>
+        </nav>
+    </main>
 </body>
 </html>
