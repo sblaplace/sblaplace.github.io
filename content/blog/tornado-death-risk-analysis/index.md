@@ -7,7 +7,7 @@ description = "An analysis of population-adjusted tornado mortality rates from 1
 tags = ["data-analysis", "meteorology", "public-safety", "visualization"]
 +++
 
-Tornado deaths in the United States have declined dramatically over the past 124 years. When adjusted for population growth in tornado-prone regions, the mortality rate has dropped by 88.8% from the pre-radar era (1900-1950) to the modern era (1991-2024). This analysis examines how technological advances in weather prediction and warning systems have transformed tornado safety.
+Tornado deaths in the United States have declined dramatically over the past 124 years. When adjusted for population growth in tornado-prone regions, the mortality rate has dropped by 88.8% from the pre-radar era (1900-1950) to the modern era (1991-2024), resulting in an order of magnitude reduced risk of dying as a result of a tornado for people living in regions that have them frequently.
 
 {{ responsive_image(path="blog/tornado-death-risk-analysis/tornado_death_risk.png", width=800, alt="Tornado Death Risk Chart") }}
 
@@ -34,7 +34,7 @@ This era began with the introduction of weather radar in the 1950s. The 1953 Wac
 - **Total deaths:** 2,332  
 - **57% reduction** from Warning Era, **89% reduction** from Pre-Radar era
 
-Advances in Doppler radar, improved forecasting models, and widespread communication through mobile devices have further reduced casualties. The 2011 Super Outbreak remains an outlier, but even this catastrophic event resulted in a lower population-adjusted death rate (2.85 per million) compared to historical standards.
+Advances in Doppler radar, improved forecasting models, and widespread communication through mobile devices have further reduced casualties. The beginning of this era is marked by the deployment of the Nexrad system over the course of 1992 to 1997. The 2011 Super Outbreak remains an outlier, but even this catastrophic event resulted in a lower population-adjusted death rate (2.85 per million) compared to historical standards.
 
 ## Key Insights
 
