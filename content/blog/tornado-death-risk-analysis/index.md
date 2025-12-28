@@ -54,7 +54,9 @@ This reduced variability indicates more consistent safety outcomes across differ
 
 ### This Is Happening Despite Obstacles
 
-This change is even more impressive when considering factors like the spread of mobile homes, which offer basically no protection, can whose residents can make up over 40% of fatalities in some cases. Also, nighttime and rain-wrapped tornadoes, which are much more difficult to see and to judge the path of from the ground, are becoming more common as well. In those cases, early warning systems can be the only way to know that the tornado is coming before it has arrived.
+This change is even more impressive when considering factors like the prevalence of vulnerable housing. Mobile homes, which offer significantly less protection than permanent structures, comprise a large share of housing in many tornado-prone states. According to **2024 American Community Survey 1-Year Estimates**, mobile homes account for **14.0%** of housing units in Mississippi, **12.8%** in South Carolina, **12.2%** in Louisiana, and **11.6%** in Alabama. Despite these structural vulnerabilities—where residents can account for a disproportionately high percentage of fatalities—overall death rates continue to decline.
+
+Additionally, environmental factors like nighttime and rain-wrapped tornadoes are becoming more common. These conditions make visual identification difficult or impossible, leaving early warning systems as the only line of defense.
 
 ## Methodology
 
@@ -74,7 +76,8 @@ The era boundaries reflect major technological milestones:
 - **Tornado deaths (1950-2024):** [NOAA Storm Prediction Center Tornado Database](https://www.spc.noaa.gov/wcm/)
 - **Tornado deaths (1900-1949):** Thomas P. Grazulis "Significant Tornadoes" historical records
 - **Population estimates:** [U.S. Census Bureau Historical Population Tables](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
-- 
+- **Housing data:** [U.S. Census Bureau American Community Survey (2024)](https://data.census.gov/)
+
 <details>
 <summary><strong>View Analysis Code</strong></summary>
 
