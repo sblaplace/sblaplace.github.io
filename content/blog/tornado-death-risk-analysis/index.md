@@ -51,7 +51,7 @@ This reduced variability indicates more consistent safety outcomes across differ
 
 ## Methodology
 
-The analysis uses population-adjusted mortality rates calculated as deaths per million population in tornado-prone regions. Population estimates are derived from U.S. Census data for 25 states with significant tornado activity: Alabama, Arkansas, Florida, Georgia, Iowa, Illinois, Indiana, Kansas, Kentucky, Louisiana, Michigan, Minnesota, Missouri, Mississippi, North Carolina, North Dakota, Nebraska, Ohio, Oklahoma, South Carolina, South Dakota, Tennessee, Texas, Virginia, and Wisconsin.
+The analysis uses population-adjusted mortality rates calculated as deaths per million population in tornado-prone regions. Population estimates are derived from U.S. Census data for 25 states with significant tornado activity: Alabama, Arkansas, Florida, Georgia, Iowa, Illinois, Indiana, Kansas, Kentucky, Louisiana, Michigan, Minnesota, Missouri, Mississippi, North Carolina, North Dakota, Nebraska, Ohio, Oklahoma, South Carolina, South Dakota, Tennessee, Texas, Virginia, and Wisconsin. These states were specifically selected because they capture the vast majority of historical US tornado climatology and fatalities, covering both the traditional "Tornado Alley" in the Plains and "Dixie Alley" in the Southeast. By focusing on these regions, the population adjustment better reflects the risk to the communities most exposed to significant tornado hazards.
 
 Population growth in these regions:
 - **1900:** ~45 million
@@ -66,6 +66,7 @@ The era boundaries reflect major technological milestones:
 ### Data Sources
 - **Tornado deaths (1950-2024):** [NOAA Storm Prediction Center Tornado Database](https://www.spc.noaa.gov/wcm/)
 - **Tornado deaths (1900-1949):** Thomas P. Grazulis "Significant Tornadoes" historical records
+- **Primary Institutional Source:** National Weather Service (NWS) / Storm Prediction Center (SPC), Norman, OK
 - **Population estimates:** [U.S. Census Bureau Historical Population Tables](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
 
 <details>
