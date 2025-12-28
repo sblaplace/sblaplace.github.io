@@ -14,7 +14,7 @@ highlight_code = true
 
 # Define taxonomies (must be an array)
 taxonomies = [
-    {name = "tags", feed = true},
+    {name = "tags", render = true, paginate_by = 5, feed = true},
 ]
 
 [extra]
