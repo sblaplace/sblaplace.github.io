@@ -1,13 +1,13 @@
 +++
-title = "Tornado Death Risk in the United States: A 124-Year Analysis"
+title = "Tornado Death Risk in the United States: An 89% Reduction Over 124 Years"
 date = 2025-12-27
-description = "An analysis of population-adjusted tornado mortality rates from 1900-2024, showing an 88.8% reduction in death risk through technological advances."
+description = "Tornado death risk in the US has fallen 89% since 1900. Here's a statistical view on that change."
 
 [taxonomies]
 tags = ["data-analysis", "meteorology", "public-safety", "visualization"]
 +++
 
-Tornado deaths in the United States have declined dramatically over the past 124 years. When adjusted for population growth in tornado-prone regions, the mortality rate has dropped by 88.8% from the pre-radar era (1900-1950) to the modern era (1991-2024), resulting in an order of magnitude reduced risk of dying as a result of a tornado for people living in regions that have them frequently.
+Tornado deaths in the United States have declined dramatically over the past 124 years. When adjusted for population growth in tornado-prone regions, the mortality rate has dropped by 88.8% from the pre-radar era (1900-1950) to the modern era (1991-2024), resulting in an order of magnitude reduced risk of dying and uncertainty as a result of a tornado for people living in regions that have them frequently.
 
 {{ responsive_image(path="blog/tornado-death-risk-analysis/tornado_death_risk.png", width=800, alt="Tornado Death Risk Chart") }}
 
@@ -86,6 +86,6 @@ Key features:
 
 ## Conclusion
 
-Technological innovation in weather forecasting has saved thousands of lives. The dramatic reduction in population-adjusted mortality demonstrates the value of sustained investment in meteorological research, warning systems, and public education.
+Technological innovation in weather forecasting has saved thousands of lives. The dramatic reduction in population-adjusted mortality demonstrates the value of sustained investment in meteorological research, warning systems, and public education. An American in a tornado-prone region today faces 1/10th the risk their great-grandparent did.
 
-The success of tornado safety programs offers lessons for other natural disaster mitigation efforts: early warning systems work, public communication infrastructure matters, and continuous technological improvement compounds over time to create substantial societal benefits.
+The success of tornado safety programs shows that early warning systems work, public communication infrastructure matters, and continuous technological improvement compounds over time to create substantial societal benefits.
