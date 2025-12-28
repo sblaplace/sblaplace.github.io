@@ -12,5 +12,9 @@ build_search_index = true
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
 
+# Define taxonomies
+[taxonomies]
+tags = { name = "tags", feed = true }
+
 [extra]
 # Put all your custom variables here
