@@ -42,7 +42,7 @@ Advances in Doppler radar, improved forecasting models, and widespread communica
 The 10-year rolling average shows a steady decline from peaks of 5+ deaths per million in the 1920s to consistently below 0.5 in recent decades. This represents one of the most successful public safety improvements in American history.
 
 ### Outlier Events Still Occur
-Despite improved technology, major tornado outbreaks can still produce significant casualties. The three labeled events (Tri-State 1925, Waco/Flint 1953, and the 2011 Super Outbreak) demonstrate that extreme weather can overwhelm even modern warning systems.
+Despite improved technology, major tornado outbreaks can still produce significant casualties. The three labeled events (Tri-State 1925, Waco/Flint 1953, and the 2011 Super Outbreak) demonstrate that extreme weather exists across regimes and weren't merely an artefact of the old ways.
 
 ### Declining Variability
 Not only has the mean death rate decreased, but the standard deviation has also fallen dramatically:
