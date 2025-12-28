@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ taxonomy.name | title }} - {{ config.title }}</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { color: #2c3e50; }
+        .tags-list { list-style: none; padding: 0; }
+        .tag-item {
+            margin: 1em 0;
+            padding: 0.8em;
+            background: #f8f9fa;
+            border-left: 3px solid #3498db;
+        }
+        .tag-item a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .tag-item a:hover {
+            color: #3498db;
+        }
+        .tag-count {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2em;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ taxonomy.name | title }}</h1>
+    
+    <ul class="tags-list">
+    {% for term in terms %}
+        <li class="tag-item">
+            <a href="{{ term.permalink | safe }}">{{ term.name }}</a>
+            <span class="tag-count">({{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %})</span>
+        </li>
+    {% endfor %}
+    </ul>
+    
+    <a href="/" class="back-link">← Back to home</a>
+</body>
+</html>
