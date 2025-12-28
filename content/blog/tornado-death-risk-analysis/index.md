@@ -9,7 +9,7 @@ tags = ["data-analysis", "meteorology", "public-safety", "visualization"]
 
 Tornado deaths in the United States have declined dramatically over the past 124 years. When adjusted for population growth in tornado-prone regions, the mortality rate has dropped by 88.8% from the pre-radar era (1900-1950) to the modern era (1991-2024). This analysis examines how technological advances in weather prediction and warning systems have transformed tornado safety.
 
-![Tornado Death Risk Chart](tornado_death_risk.png)
+{{ responsive_image(path="tornado_death_risk.png", width=800, alt="Tornado Death Risk Chart") }}
 
 ## Three Eras of Tornado Safety
 
