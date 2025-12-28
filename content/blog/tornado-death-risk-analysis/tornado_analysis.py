@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from io import StringIO
+import matplotlib.patheffects as path_effects
 
 # Data Sources:
 # - NOAA Storm Prediction Center Tornado Database (1950-2024): https://www.spc.noaa.gov/wcm/
@@ -189,26 +190,30 @@ for era in era_order:
     ax1.hlines(mean_rate, era_data['Year'].min(), era_data['Year'].max(),
                colors=era_colors[era], linestyles='--', linewidth=2, alpha=0.8)
     
-    # Annotate the mean
+    # Annotate the mean with path effect for outline
     mid_year = (era_data['Year'].min() + era_data['Year'].max()) / 2
-    ax1.annotate(f'{era}\nMean: {mean_rate:.2f}', 
-                 xy=(mid_year, mean_rate), xytext=(0, 15),
-                 textcoords='offset points', ha='center', fontsize=9,
-                 bbox=dict(boxstyle='round,pad=0.3', facecolor=era_colors[era], alpha=0.3))
+    text = ax1.annotate(f'{era}\nMean: {mean_rate:.2f}', 
+                        xy=(mid_year, mean_rate), xytext=(0, 15),
+                        textcoords='offset points', ha='center', fontsize=9,
+                        bbox=dict(boxstyle='round,pad=0.3', facecolor=era_colors[era], alpha=0.3))
+    text.set_path_effects([path_effects.Stroke(linewidth=3, foreground='white'),
+                           path_effects.Normal()])
 
 # Add vertical lines for era boundaries
 ax1.axvline(x=1950.5, color='gray', linestyle=':', linewidth=1.5, alpha=0.7)
 ax1.axvline(x=1990.5, color='gray', linestyle=':', linewidth=1.5, alpha=0.7)
 
-# Annotate major outliers
+# Annotate major outliers with path effect for outline
 outliers = [(1925, 'Tri-State\nTornado'), (1953, 'Waco/Flint\nOutbreaks'), 
             (2011, 'Super\nOutbreak')]
 for year, label in outliers:
     row = df[df['Year'] == year].iloc[0]
-    ax1.annotate(label, xy=(year, row['DeathRate']), 
-                 xytext=(0, 20), textcoords='offset points',
-                 ha='center', fontsize=8, fontstyle='italic',
-                 arrowprops=dict(arrowstyle='->', color='gray', lw=0.8))
+    text = ax1.annotate(label, xy=(year, row['DeathRate']), 
+                        xytext=(0, 20), textcoords='offset points',
+                        ha='center', fontsize=8, fontstyle='italic',
+                        arrowprops=dict(arrowstyle='->', color='gray', lw=0.8))
+    text.set_path_effects([path_effects.Stroke(linewidth=2, foreground='white'),
+                           path_effects.Normal()])
 
 ax1.set_ylabel('Deaths per Million Population\n(Tornado-Prone Regions)', fontsize=11)
 ax1.set_xlim(1898, 2026)
@@ -227,11 +232,13 @@ bars = ax2.bar(era_order, era_stats['mean'], color=[era_colors[e] for e in era_o
 ax2.errorbar(era_order, era_stats['mean'], yerr=era_stats['std'], 
              fmt='none', color='black', capsize=5, capthick=2, linewidth=2)
 
-# Add value labels
+# Add value labels with smaller font size, not bold, and path effect
 for bar, era in zip(bars, era_order):
     height = bar.get_height()
-    ax2.text(bar.get_x() + bar.get_width()/2., height + era_stats.loc[era, 'std'] + 0.15,
-             f'{height:.2f}', ha='center', va='bottom', fontsize=9)
+    text = ax2.text(bar.get_x() + bar.get_width()/2., height + era_stats.loc[era, 'std'] + 0.15,
+                    f'{height:.2f}', ha='center', va='bottom', fontsize=9, fontweight='normal')
+    text.set_path_effects([path_effects.Stroke(linewidth=2, foreground='white'),
+                           path_effects.Normal()])
 
 ax2.set_ylabel('Mean Death Rate', fontsize=11)
 ax2.set_xlabel('Era', fontsize=11)
