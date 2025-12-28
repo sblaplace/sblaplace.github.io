@@ -41,9 +41,6 @@ Advances in Doppler radar, improved forecasting models, and widespread communica
 ### Dramatic Risk Reduction
 The 10-year rolling average shows a steady decline from peaks of 5+ deaths per million in the 1920s to consistently below 0.5 in recent decades. This represents one of the most successful public safety improvements in American history.
 
-### Outlier Events Still Occur
-Despite improved technology, major tornado outbreaks can still produce significant casualties. The three labeled events (Tri-State 1925, Waco/Flint 1953, and the 2011 Super Outbreak) demonstrate that extreme weather exists across regimes and weren't merely an artefact of the old ways.
-
 ### Declining Variability
 Not only has the mean death rate decreased, but the standard deviation has also fallen dramatically:
 - Pre-Radar: σ = 2.77
@@ -51,12 +48,6 @@ Not only has the mean death rate decreased, but the standard deviation has also 
 - Modern Era: σ = 0.47
 
 This reduced variability indicates more consistent safety outcomes across different years and events.
-
-### This Is Happening Despite Obstacles
-
-This change is even more impressive when considering factors like the prevalence of vulnerable housing. Mobile homes, which offer significantly less protection than permanent structures, comprise a large share of housing in many tornado-prone states. According to **2024 American Community Survey 1-Year Estimates**, mobile homes account for **14.0%** of housing units in Mississippi, **12.8%** in South Carolina, **12.2%** in Louisiana, and **11.6%** in Alabama. Despite these structural vulnerabilities—where residents can account for a disproportionately high percentage of fatalities—overall death rates continue to decline.
-
-Additionally, the nature of the storms themselves presents growing challenges. [Research indicates](https://repository.library.noaa.gov/view/noaa/56080) that **nighttime tornadoes** are nearly twice as deadly as daytime events, largely because they occur when public awareness is lowest. The proportion of tornado fatalities occurring at night has [risen to 38%](https://chubasco.niu.edu/pubs/Strader%20et%20al.%202022%20WCAS.pdf) in recent decades. This risk is compounded by the [eastward shift of "Tornado Alley"](https://baronweather.com/extreme-weather/tornado-alley-is-on-the-move) into the Southeast, where higher humidity levels lead to more **rain-wrapped tornadoes**. These storms are often obscured by heavy precipitation, making visual confirmation difficult or impossible and leaving radar-based warnings as the only reliable method of detection.
 
 ## Methodology
 
@@ -76,8 +67,6 @@ The era boundaries reflect major technological milestones:
 - **Tornado deaths (1950-2024):** [NOAA Storm Prediction Center Tornado Database](https://www.spc.noaa.gov/wcm/)
 - **Tornado deaths (1900-1949):** Thomas P. Grazulis "Significant Tornadoes" historical records
 - **Population estimates:** [U.S. Census Bureau Historical Population Tables](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
-- **Housing data:** [U.S. Census Bureau American Community Survey (2024)](https://data.census.gov/)
-- **Nocturnal/Regional trends:** [Strader et al., 2022](https://chubasco.niu.edu/pubs/Strader%20et%20al.%202022%20WCAS.pdf)
 
 <details>
 <summary><strong>View Analysis Code</strong></summary>
@@ -97,6 +86,6 @@ Key features:
 
 ## Conclusion
 
-Technological innovation in weather forecasting has saved thousands of lives. While tornado risk can never be eliminated entirely, the dramatic reduction in population-adjusted mortality demonstrates the value of sustained investment in meteorological research, warning systems, and public education.
+Technological innovation in weather forecasting has saved thousands of lives. The dramatic reduction in population-adjusted mortality demonstrates the value of sustained investment in meteorological research, warning systems, and public education.
 
 The success of tornado safety programs offers lessons for other natural disaster mitigation efforts: early warning systems work, public communication infrastructure matters, and continuous technological improvement compounds over time to create substantial societal benefits.
