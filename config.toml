@@ -1,5 +1,7 @@
 # The URL the site will be built for
 base_url = "https://sblaplace.github.io"
+title = "Sarah Laplace"
+description = "Personal website and blog of Sarah Laplace."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
