@@ -1,2 +1,9 @@
 {% set image = resize_image(path=path, width=width, op="fit_width") %}
-<img src="{{ image.url }}" alt="{{ alt }}" width="{{ image.width }}" height="{{ image.height }}" loading="lazy" />
+{% set image_webp = resize_image(path=path, width=width, op="fit_width", format="webp") %}
+
+<a href="{{ get_url(path=path) }}" target="_blank" title="Click to view full size">
+    <picture>
+        <source srcset="{{ image_webp.url }}" type="image/webp" />
+        <img src="{{ image.url }}" alt="{{ alt }}" width="{{ image.width }}" height="{{ image.height }}" loading="lazy" decoding="async" />
+    </picture>
+</a>
