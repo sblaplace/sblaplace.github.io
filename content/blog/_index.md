@@ -3,5 +3,5 @@ title = "Blog"
 sort_by = "date"
 template = "section.html"
 page_template = "page.html"
-generate_feed = true
+generate_feeds = true
 +++
