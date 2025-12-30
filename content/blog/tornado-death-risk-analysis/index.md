@@ -7,7 +7,7 @@ description = "Tornado death risk in the US has fallen 89% since 1900. Here's a 
 tags = ["data-analysis", "meteorology", "public-safety", "visualization"]
 +++
 
-Tornado deaths in the United States have declined dramatically over the past 124 years. When adjusted for population growth in tornado-prone regions, the mortality rate has dropped by 88.8% from the pre-radar era (1900-1950) to the modern era (1991-2024), resulting in an order of magnitude reduced risk of dying and uncertainty as a result of a tornado for people living in regions that have them frequently.
+Tornado deaths in the United States have declined dramatically over the past 124 years. When adjusted for population growth in tornado-prone regions, the mortality rate has dropped by 88.8% from the pre-radar era (1900-1950) to the modern era (1991-2024), resulting in an order of magnitude reduced risk of dying and year-to-year volatility as a result of a tornado for people living in regions that have them frequently.
 
 {{ responsive_image(path="blog/tornado-death-risk-analysis/tornado_death_risk.png", width=800, alt="Tornado Death Risk Chart") }}
 
