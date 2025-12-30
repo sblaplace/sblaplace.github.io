@@ -17,7 +17,6 @@ The data reveals three distinct periods in tornado mortality:
 
 ### Pre-Radar Era (1900-1950)
 - **Mean death rate:** 3.26 deaths per million population (~45-85 million)
-- **Mean yearly deaths:** ~207 deaths per year (10,553 deaths / 51 years)
 - **Total deaths:** 10,553
 - **Characteristics:** No advance warning systems, high variability in annual deaths
 
@@ -25,7 +24,6 @@ The deadliest single event during this period was the 1925 Tri-State Tornado, wh
 
 ### Warning Era (1951-1990)
 - **Mean death rate:** 0.87 deaths per million population (~87-156 million)
-- **Mean yearly deaths:** ~97 deaths per year (3,864 deaths / 40 years)
 - **Total deaths:** 3,864
 - **73% reduction** from Pre-Radar era
 
@@ -33,16 +31,15 @@ This era began with the introduction of weather radar in the 1950s. The 1953 Wac
 
 ### Modern Era (1991-2024)
 - **Mean death rate:** 0.37 deaths per million population (~158-210 million)
-- **Mean yearly deaths:** ~69 deaths per year (2,332 deaths / 34 years)
 - **Total deaths:** 2,332  
 - **57% reduction** from Warning Era, **89% reduction** from Pre-Radar era
 
-Advances in Doppler radar, improved forecasting models, and widespread communication through mobile devices have further reduced casualties. The beginning of this era is marked by the deployment of the Nexrad system over the course of 1992 to 1997. The 2011 Super Outbreak remains an outlier, but even this catastrophic event resulted in a lower population-adjusted death rate (2.85 per million) compared to historical standards.
+Advances in Doppler radar, improved forecasting models, and widespread communication through mobile devices have further reduced casualties. The beginning of this era is marked by the deployment of the Nexrad system over the course of 1992 to 1997. The 2011 Super Outbreak remains an outlier, but even this catastrophic event resulted in a lower population-adjusted death rate (2.85 per million) compared to historical standards. In total, this means we're now down to only around 69 deaths each year from tornadoes.
 
 ## Key Insights
 
 ### Dramatic Risk Reduction
-The 10-year rolling average shows a steady decline from peaks of 5+ deaths per million in the 1920s to consistently below 0.5 in recent decades, meaning many fewer people die from tornadoes each year than in the past. This represents one of the most successful public safety improvements in American history.
+The 10-year rolling average shows a steady decline from peaks of 5+ deaths per million in the 1920s to consistently below 0.5 in recent decades. This represents one of the most successful public safety improvements in American history.
 
 ### Declining Variability
 Not only has the mean death rate decreased, but the standard deviation has also fallen dramatically:
