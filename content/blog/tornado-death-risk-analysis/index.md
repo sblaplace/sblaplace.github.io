@@ -75,7 +75,7 @@ The era boundaries reflect major technological milestones:
 The complete Python code for this analysis is available in [`tornado_analysis.py`](tornado_analysis.py).
 The raw data series used to compute the chart is in [`tornado_data.csv`](tornado_data.csv), and the schema is documented in [`dataset_schema.md`](dataset_schema.md).
 
-The pre-computed chart outputs are available as CSVs:
+The pre-computed chart outputs are available as CSVs under the [Unlicense](https://unlicense.org/):
 - [`tornado_results_yearly.csv`](tornado_results_yearly.csv) (Year-by-year values used in the plot)
 - [`tornado_results_era_stats.csv`](tornado_results_era_stats.csv) (Era aggregates used in the bar chart)
 
@@ -94,6 +94,7 @@ The success of tornado safety programs shows that early warning systems work, pu
   "name": "US Tornado Death Risk Results (1900-2024)",
   "description": "Derived dataset of population-adjusted US tornado mortality (deaths per million) and rolling averages computed from historical annual tornado deaths and regional population estimates.",
   "url": "https://sblaplace.github.io/blog/tornado-death-risk-analysis/",
+  "license": "https://unlicense.org/UNLICENSE",
   "keywords": ["tornado", "weather", "mortality", "public safety", "meteorology"],
   "creator": {
     "@type": "Person",
