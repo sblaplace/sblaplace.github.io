@@ -70,9 +70,12 @@ The era boundaries reflect major technological milestones:
 - **Population estimates:** [U.S. Census Bureau Historical Population Tables](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
 
 <details>
-<summary><strong>View Analysis Code</strong></summary>
+<summary><strong>View Analysis Code & Data Schema</strong></summary>
 
-The complete Python code for this analysis is available in [`tornado_analysis.py`](tornado_analysis.py). The script:
+The complete Python code for this analysis is available in [`tornado_analysis.py`](tornado_analysis.py).
+The data structure is documented in the [`dataset_schema.md`](dataset_schema.md) file.
+
+The script:
 - Loads raw tornado death counts and population estimates
 - Calculates population-adjusted death rates (deaths per million)
 - Generates the visualization with time series and era comparison
