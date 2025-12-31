@@ -73,18 +73,11 @@ The era boundaries reflect major technological milestones:
 <summary><strong>View Analysis Code, Data & Schema</strong></summary>
 
 The complete Python code for this analysis is available in [`tornado_analysis.py`](tornado_analysis.py).
-The raw data is available in [`tornado_data.csv`](tornado_data.csv) ([Unlicense](https://unlicense.org/)) and the schema is documented in [`dataset_schema.md`](dataset_schema.md).
+The raw data series used to compute the chart is in [`tornado_data.csv`](tornado_data.csv), and the schema is documented in [`dataset_schema.md`](dataset_schema.md).
 
-The script:
-- Loads raw tornado death counts and population estimates
-- Calculates population-adjusted death rates (deaths per million)
-- Generates the visualization with time series and era comparison
-- Outputs summary statistics
-
-Key features:
-- **Transparent normalization:** Death rates calculated directly from raw counts
-- **Reproducible:** All data and calculations in a single script
-- **Well-documented:** Data sources and methodology clearly cited
+The pre-computed chart outputs are available as CSVs:
+- [`tornado_results_yearly.csv`](tornado_results_yearly.csv) (Year-by-year values used in the plot)
+- [`tornado_results_era_stats.csv`](tornado_results_era_stats.csv) (Era aggregates used in the bar chart)
 
 </details>
 
@@ -98,21 +91,32 @@ The success of tornado safety programs shows that early warning systems work, pu
 {
   "@context": "https://schema.org/",
   "@type": "Dataset",
-  "name": "US Tornado Death Risk Data (1900-2024)",
-  "description": "Historical dataset of US tornado deaths adjusted for population growth in tornado-prone regions, covering Pre-Radar, Warning, and Modern eras.",
+  "name": "US Tornado Death Risk Results (1900-2024)",
+  "description": "Derived dataset of population-adjusted US tornado mortality (deaths per million) and rolling averages computed from historical annual tornado deaths and regional population estimates.",
   "url": "https://sblaplace.github.io/blog/tornado-death-risk-analysis/",
-  "sameAs": "https://github.com/sblaplace/sblaplace.github.io/blob/main/content/blog/tornado-death-risk-analysis/tornado_data.csv",
-  "license": "https://unlicense.org/UNLICENSE",
   "keywords": ["tornado", "weather", "mortality", "public safety", "meteorology"],
   "creator": {
     "@type": "Person",
     "name": "Sarah Laplace"
   },
-  "distribution": {
-    "@type": "DataDownload",
-    "encodingFormat": "text/csv",
-    "contentUrl": "https://raw.githubusercontent.com/sblaplace/sblaplace.github.io/main/content/blog/tornado-death-risk-analysis/tornado_data.csv"
-  },
+  "isBasedOn": [
+    "https://www.spc.noaa.gov/wcm/",
+    "https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "Yearly series",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://raw.githubusercontent.com/sblaplace/sblaplace.github.io/main/content/blog/tornado-death-risk-analysis/tornado_results_yearly.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Era aggregates",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://raw.githubusercontent.com/sblaplace/sblaplace.github.io/main/content/blog/tornado-death-risk-analysis/tornado_results_era_stats.csv"
+    }
+  ],
   "temporalCoverage": "1900/2024",
   "spatialCoverage": {
     "@type": "Place",
@@ -129,13 +133,13 @@ The success of tornado safety programs shows that early warning systems work, pu
     },
     {
       "@type": "PropertyValue",
-      "name": "Deaths",
-      "description": "Confirmed tornado fatalities"
+      "name": "DeathRate",
+      "description": "Deaths per million population in tornado-prone regions"
     },
     {
       "@type": "PropertyValue",
-      "name": "PopFactor",
-      "description": "Population in millions for 25 tornado-prone states"
+      "name": "RollingAvg",
+      "description": "10-year centered rolling average of DeathRate"
     },
     {
       "@type": "PropertyValue",

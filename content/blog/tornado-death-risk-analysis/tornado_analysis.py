@@ -8,13 +8,13 @@ import matplotlib.patheffects as path_effects
 # - NOAA Storm Prediction Center Tornado Database (1950-2024): https://www.spc.noaa.gov/wcm/
 # - Thomas P. Grazulis "Significant Tornadoes" (1900-1949): Historical tornado records
 # - U.S. Census Bureau Historical Population Estimates: https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html
-# 
-# Population factors represent estimated population in tornado-prone regions (millions)
-# Tornado-prone regions (25 states): AL, AR, FL, GA, IA, IL, IN, KS, KY, LA, MI, MN, MO, 
-#                                    MS, NC, ND, NE, OH, OK, SC, SD, TN, TX, VA, WI
-# Population estimates interpolated linearly between census years
+#
+# This script also exports the pre-computed chart series to CSV:
+# - tornado_results_yearly.csv
+# - tornado_results_era_stats.csv
 
 # Raw data: Year, Deaths, Population (millions in tornado-prone regions)
+# (Kept inline so the analysis remains a single-file reproduction.)
 data = """Year,Deaths,PopFactor,Era
 1900,101,45.0,Pre-Radar
 1901,52,45.8,Pre-Radar
@@ -148,19 +148,10 @@ df = pd.read_csv(StringIO(data))
 # Calculate population-adjusted death rate (deaths per million population)
 df['DeathRate'] = (df['Deaths'] / df['PopFactor'])
 
-# Population milestones by era
-print("\n" + "="*70)
-print("POPULATION IN TORNADO-PRONE REGIONS BY ERA")
-print("="*70)
-print("Pre-Radar Era (1900-1950):  45.0M → 85.0M")
-print("Warning Era (1951-1990):    86.8M → 156.4M")
-print("Modern Era (1991-2024):     158.2M → 210.0M")
-print("="*70)
-
 # Define era colors and order
 era_colors = {
     'Pre-Radar': '#d62728',      # Red
-    'Warning Era': '#ff7f0e',    # Orange  
+    'Warning Era': '#ff7f0e',    # Orange
     'Modern Era': '#2ca02c'      # Green
 }
 era_order = ['Pre-Radar', 'Warning Era', 'Modern Era']
@@ -168,19 +159,23 @@ era_order = ['Pre-Radar', 'Warning Era', 'Modern Era']
 # Calculate 10-year rolling average
 df['RollingAvg'] = df['DeathRate'].rolling(window=10, center=True).mean()
 
+# Export the computed series used in the chart
+# Note: rolling average has NaN at the edges due to centering.
+df.to_csv('tornado_results_yearly.csv', index=False)
+
 # Create figure with two subplots
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 10), height_ratios=[3, 1])
-fig.suptitle('Tornado Death Risk in the United States (1900-2024)\nPopulation-Adjusted Mortality Rate', 
+fig.suptitle('Tornado Death Risk in the United States (1900-2024)\nPopulation-Adjusted Mortality Rate',
              fontsize=16, fontweight='bold', y=0.98)
 
 # === TOP PLOT: Main time series ===
 for era in era_order:
     era_data = df[df['Era'] == era]
-    ax1.scatter(era_data['Year'], era_data['DeathRate'], 
+    ax1.scatter(era_data['Year'], era_data['DeathRate'],
                 c=era_colors[era], label=era, alpha=0.6, s=40, edgecolors='white', linewidth=0.5)
 
 # Add rolling average line
-ax1.plot(df['Year'], df['RollingAvg'], color='navy', linewidth=2.5, 
+ax1.plot(df['Year'], df['RollingAvg'], color='navy', linewidth=2.5,
          label='10-Year Rolling Average', zorder=5)
 
 # Add era mean lines
@@ -189,10 +184,10 @@ for era in era_order:
     mean_rate = era_data['DeathRate'].mean()
     ax1.hlines(mean_rate, era_data['Year'].min(), era_data['Year'].max(),
                colors=era_colors[era], linestyles='--', linewidth=2, alpha=0.8)
-    
+
     # Annotate the mean with path effect for outline
     mid_year = (era_data['Year'].min() + era_data['Year'].max()) / 2
-    text = ax1.annotate(f'{era}\nMean: {mean_rate:.2f}', 
+    text = ax1.annotate(f'{era}\nMean: {mean_rate:.2f}',
                         xy=(mid_year, mean_rate), xytext=(0, 15),
                         textcoords='offset points', ha='center', fontsize=9,
                         bbox=dict(boxstyle='round,pad=0.3', facecolor=era_colors[era], alpha=0.3))
@@ -204,11 +199,11 @@ ax1.axvline(x=1950.5, color='gray', linestyle=':', linewidth=1.5, alpha=0.7)
 ax1.axvline(x=1990.5, color='gray', linestyle=':', linewidth=1.5, alpha=0.7)
 
 # Annotate major outliers with path effect for outline
-outliers = [(1925, 'Tri-State\nTornado'), (1953, 'Waco/Flint\nOutbreaks'), 
+outliers = [(1925, 'Tri-State\nTornado'), (1953, 'Waco/Flint\nOutbreaks'),
             (2011, 'Super\nOutbreak')]
 for year, label in outliers:
     row = df[df['Year'] == year].iloc[0]
-    text = ax1.annotate(label, xy=(year, row['DeathRate']), 
+    text = ax1.annotate(label, xy=(year, row['DeathRate']),
                         xytext=(0, 20), textcoords='offset points',
                         ha='center', fontsize=8, fontstyle='italic',
                         arrowprops=dict(arrowstyle='->', color='gray', lw=0.8))
@@ -225,11 +220,14 @@ ax1.set_axisbelow(True)
 # === BOTTOM PLOT: Era comparison bar chart with error bars ===
 era_stats = df.groupby('Era')['DeathRate'].agg(['mean', 'median', 'std', 'count']).reindex(era_order)
 
-bars = ax2.bar(era_order, era_stats['mean'], color=[era_colors[e] for e in era_order], 
+# Export the computed era aggregates used in the bar chart
+era_stats.to_csv('tornado_results_era_stats.csv')
+
+bars = ax2.bar(era_order, era_stats['mean'], color=[era_colors[e] for e in era_order],
                edgecolor='black', linewidth=1.2, alpha=0.8)
 
 # Add error bars (standard deviation)
-ax2.errorbar(era_order, era_stats['mean'], yerr=era_stats['std'], 
+ax2.errorbar(era_order, era_stats['mean'], yerr=era_stats['std'],
              fmt='none', color='black', capsize=5, capthick=2, linewidth=2)
 
 # Add value labels with smaller font size, not bold, and path effect
