@@ -1,3 +1,9 @@
++++
+title = "Tornado Analysis Dataset Schema"
+date = 2025-12-31
+description = "Schema documentation for the tornado death risk analysis dataset."
++++
+
 # Dataset Schema
 
 This document describes the data structure used in the Tornado Death Risk Analysis.
