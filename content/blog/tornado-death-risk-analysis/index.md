@@ -70,10 +70,10 @@ The era boundaries reflect major technological milestones:
 - **Population estimates:** [U.S. Census Bureau Historical Population Tables](https://www.census.gov/data/tables/time-series/dec/popchange-data-text.html)
 
 <details>
-<summary><strong>View Analysis Code & Data Schema</strong></summary>
+<summary><strong>View Analysis Code, Data & Schema</strong></summary>
 
 The complete Python code for this analysis is available in [`tornado_analysis.py`](tornado_analysis.py).
-The data structure is documented in the [`dataset_schema.md`](dataset_schema.md) file.
+The raw data is available in [`tornado_data.csv`](tornado_data.csv) and the schema is documented in [`dataset_schema.md`](dataset_schema.md).
 
 The script:
 - Loads raw tornado death counts and population estimates
@@ -93,3 +93,54 @@ Key features:
 Technological innovation in weather forecasting has saved thousands of lives. The dramatic reduction in population-adjusted mortality demonstrates the value of sustained investment in meteorological research, warning systems, and public education. An American in a tornado-prone region today faces 1/10th the risk their great-grandparent did.
 
 The success of tornado safety programs shows that early warning systems work, public communication infrastructure matters, and continuous technological improvement compounds over time to create substantial societal benefits.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "US Tornado Death Risk Data (1900-2024)",
+  "description": "Historical dataset of US tornado deaths adjusted for population growth in tornado-prone regions, covering Pre-Radar, Warning, and Modern eras.",
+  "url": "https://sblaplace.github.io/blog/tornado-death-risk-analysis/",
+  "sameAs": "https://github.com/sblaplace/sblaplace.github.io/blob/main/content/blog/tornado-death-risk-analysis/tornado_data.csv",
+  "keywords": ["tornado", "weather", "mortality", "public safety", "meteorology"],
+  "creator": {
+    "@type": "Person",
+    "name": "Sarah Laplace"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "text/csv",
+    "contentUrl": "https://raw.githubusercontent.com/sblaplace/sblaplace.github.io/main/content/blog/tornado-death-risk-analysis/tornado_data.csv"
+  },
+  "temporalCoverage": "1900/2024",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "addressCountry": "US"
+    }
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Year",
+      "description": "Calendar year"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "description": "Confirmed tornado fatalities"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PopFactor",
+      "description": "Population in millions for 25 tornado-prone states"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Era",
+      "description": "Historical era classification"
+    }
+  ]
+}
+</script>
