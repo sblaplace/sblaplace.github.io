@@ -73,7 +73,7 @@ The era boundaries reflect major technological milestones:
 <summary><strong>View Analysis Code, Data & Schema</strong></summary>
 
 The complete Python code for this analysis is available in [`tornado_analysis.py`](tornado_analysis.py).
-The raw data is available in [`tornado_data.csv`](tornado_data.csv) and the schema is documented in [`dataset_schema.md`](dataset_schema.md).
+The raw data is available in [`tornado_data.csv`](tornado_data.csv) ([Unlicense](https://unlicense.org/)) and the schema is documented in [`dataset_schema.md`](dataset_schema.md).
 
 The script:
 - Loads raw tornado death counts and population estimates
@@ -102,6 +102,7 @@ The success of tornado safety programs shows that early warning systems work, pu
   "description": "Historical dataset of US tornado deaths adjusted for population growth in tornado-prone regions, covering Pre-Radar, Warning, and Modern eras.",
   "url": "https://sblaplace.github.io/blog/tornado-death-risk-analysis/",
   "sameAs": "https://github.com/sblaplace/sblaplace.github.io/blob/main/content/blog/tornado-death-risk-analysis/tornado_data.csv",
+  "license": "https://unlicense.org/UNLICENSE",
   "keywords": ["tornado", "weather", "mortality", "public safety", "meteorology"],
   "creator": {
     "@type": "Person",
