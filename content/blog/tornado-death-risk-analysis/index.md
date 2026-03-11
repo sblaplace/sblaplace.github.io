@@ -1,5 +1,5 @@
 +++
-title = "Tornado Death Risk in the United States: An 89% Reduction Over 124 Years"
+title = "The 89% Decline in US Tornado Deaths (1900-2024)"
 date = 2025-12-27
 description = "Tornado death risk in the US has fallen 89% since 1900. Here's a statistical view on that change."
 
